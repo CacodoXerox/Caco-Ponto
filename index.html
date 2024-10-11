@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ponto do Caco</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ponto do Caco</h1>
+        <div class="form-section">
+            <label for="date">Data:</label>
+            <input type="date" id="date">
+            
+            <label for="start-time">Hora de Entrada:</label>
+            <input type="time" id="start-time">
+            
+            <label for="lunch-start">Hora de Início do Almoço:</label>
+            <input type="time" id="lunch-start">
+            
+            <label for="lunch-end">Hora de Fim do Almoço:</label>
+            <input type="time" id="lunch-end">
+            
+            <label for="end-time">Hora de Saída:</label>
+            <input type="time" id="end-time">
+            
+            <button id="calculate-btn">Calcular</button>
+        </div>
+        <div id="result-text"></div>
+        <table id="history-table">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Horas Extras</th>
+                    <th>Valor a Pagar (R$)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="total-pay">Total Mensal: R$ 0.00</div>
+        <button id="generate-pdf">Gerar PDF</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.12/jspdf.plugin.autotable.min.js"></script>
+</body>
+</html>
